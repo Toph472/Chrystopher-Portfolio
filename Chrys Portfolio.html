@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chrystopher | My Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #020817 0%, #0f172a 45%, #111827 100%);
+      color: #f8fafc;
+      line-height: 1.8;
+    }
+
+    /* Navigation */
+    header {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h2 {
+      color: #7dd3fc;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 25px;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.55);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      margin-bottom: 10px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      max-width: 550px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, #164ff9 0%, #fb7185 100%);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 20px rgba(116, 22, 249, 0.3);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(113, 127, 251, 0.35);
+    }
+
+    /* General Sections */
+    section {
+      padding: 60px 8%;
+      max-width: 1100px;
+      margin: auto;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      color: #7dd3fc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      color: #dbeafe;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.35);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.22);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: block;
+      border: 1px solid rgba(125, 211, 252, 0.25);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    /* Contact */
+    #contact a {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(180deg, #0f172a 0%, #020817 100%);
+      color: #cbd5e1;
+      margin-top: 30px;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .profile-image {
+        width: 135px;
+        height: 135px;
+      }
+
+      section {
+        padding: 45px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <h2>Chrystopher M</h2>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Introduction -->
+  <div class="hero">
+
+    <!-- Profile Image -->
+    <img
+      src="C:\Users\chris\OneDrive\Pictures\2026\photo_1_2026-01-08_10-09-49.jpg"
+      alt="My profile photo"
+      class="profile-image"
+    >
+
+    <h1>Hi, I'm <span>Chrystopher.</span></h1>
+
+    <p>
+      A philomath who loves learning, exploring new ideas,
+      and discovering what the world has to offer.
+    </p>
+
+    <a href="#about" class="button">Discover More</a>
+
+  </div>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+      I'm someone who enjoys exploring different interests,
+      discovering new ideas, and continuously improving myself.
+      I'm curious about the world and always eager to gain new
+      knowledge and experiences. I believe there is always room
+      to grow, and I hope to make a positive difference in the world.
+    </p>
+  </section>
+
+  <!-- My Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <img
+          class="project-image"
+          src="C:\Users\chris\OneDrive\Pictures\2026\Screenshot 2026-10-12 163016.png"
+          alt="Project One preview"
+        >
+        <h3> 1.Youtube Channel</h3>
+        <p>
+          Life is a journey, it is my passion to share some of my life moments to the world. So the memories can be shared and remembered.
+      </div>
+
+      <div class="card">
+        <img
+          class="project-image"
+          src="C:\Users\chris\OneDrive\Pictures\2026\Untitled design (1).png"
+          alt="Project Two preview"
+        >
+        <h3> 2.Image Editing</h3>
+        <p>
+          I like to make posters and edit images with my own style and creativity. Not dependant on only AI prompts.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          class="project-image"
+          src="C:\Users\chris\OneDrive\Pictures\2026\4.png"
+          alt="Project Three preview"
+        >
+        <h3> 3.Tiktok Content</h3>
+        <p>
+          My future upcoming creative projects and ideas.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>
+      Email:
+      <a href="mailto:Chriss121146@gmail.com">
+        Chriss121146@gmail.com
+      </a>
+    </p>Tiktok: <a href="https://www.tiktok.com/@d.notfas.media">https://www.tiktok.com/d.notfas.media</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Chrystopher. Keep learning, keep growing.</p>
+  </footer>
+
+</body>
+</html>
